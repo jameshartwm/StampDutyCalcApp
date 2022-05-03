@@ -46,6 +46,7 @@
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="40dp"
                 android:layout_weight="1"
+                android:justificationMode="inter_word"
                 android:text="Enter the property purchase price below, and click 'calculate' to see the 2022/23 stamp duty land tax (SDLT) payable in England and Wales. If you are a first-time buyer, or you already own at least 1 UK property, choose one of the options on the navigation bar berlow." />
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -60,18 +61,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginTop="6sp"
                     android:text="£"
-                    android:textSize="36sp" />
+                    android:textSize="24sp" />
 
                 <EditText
-                    android:layout_width="240sp"
+                    android:id="@+id/standard"
+                    android:layout_width="120sp"
                     android:layout_height="48sp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="6sp"
                     android:layout_weight="9"
-                    android:hint="property price"
+                    android:hint="price"
                     android:textSize="24sp"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:maxLength="9"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -82,7 +86,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="44sp"
                 android:layout_weight="1"
-                android:text="Calculate" />
+                android:text="Calculate"
+                android:onClick="calculateStandard"/>
 
             <TextView
                 android:id="@+id/textView3"
@@ -91,7 +96,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="44sp"
                 android:layout_weight="1"
-                android:text="The stamp duty payable would be:" />
+                android:textSize="24sp"
+                android:fontFamily="sans-serif-thin"
+                android:text="Stamp duty payable:" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
@@ -106,15 +113,16 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="£"
-                    android:textSize="36sp" />
+                    android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="240sp"
-                    android:layout_height="48sp"
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="6sp"
                     android:layout_weight="9"
+                    android:gravity="left"
                     android:text=""
                     android:textSize="24sp" />
 
