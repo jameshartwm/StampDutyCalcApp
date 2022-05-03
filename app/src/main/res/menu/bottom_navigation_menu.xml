@@ -2,9 +2,16 @@
     <item
         android:id="@+id/page_1"
         android:enabled="true"
-        android:title="England and Wales"/>
+        android:icon="@drawable/ic_house"
+        android:title="Standard"/>
     <item
         android:id="@+id/page_2"
         android:enabled="true"
-        android:title="Scotland"/>
+        android:icon="@drawable/ic_house"
+        android:title="1st Time Buyer"/>
+    <item
+        android:id="@+id/page_3"
+        android:enabled="true"
+        android:icon="@drawable/ic_house"
+        android:title="Multiple Owner"/>
 </menu>
