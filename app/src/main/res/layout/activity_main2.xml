@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layoutDirection="inherit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="inherit"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="28dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:text="England and Wales"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="40dp"
+                android:layout_weight="1"
+                android:justificationMode="inter_word"
+                android:text="Enter the property purchase price below, and click 'calculate' to see the 2022/23 stamp duty land tax (SDLT) payable in England and Wales. If you are a first-time buyer, or you already own at least 1 UK property, choose one of the options on the navigation bar berlow." />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6sp"
+                    android:layout_weight="1"
+                    android:text="£"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/standard"
+                    android:layout_width="120sp"
+                    android:layout_height="48sp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6sp"
+                    android:layout_weight="9"
+                    android:hint="price"
+                    android:inputType="number"
+                    android:maxLength="9"
+                    android:textSize="24sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:layout_weight="1"
+                android:onClick="calculateStandard"
+                android:text="Calculate" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-thin"
+                android:text="Stamp duty payable:"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="£"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6sp"
+                    android:layout_weight="9"
+                    android:gravity="left"
+                    android:text=""
+                    android:textSize="24sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                android:layout_weight="1"
+                android:justificationMode="inter_word"
+                android:text="Enter the property purchase price below, and click 'calculate' to see the 2022/23 stamp duty land tax (SDLT) payable in England and Wales. If you are a first-time buyer, or you already own at least 1 UK property, choose one of the options on the navigation bar berlow." />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
