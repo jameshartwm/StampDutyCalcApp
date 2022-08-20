@@ -16,8 +16,12 @@ class MainActivity : AppCompatActivity() {
         val textEdit = findViewById<EditText>(R.id.standard);
 
         try {
-            val price = textEdit.text.toString().toInt();
-            val result = price * 2;
+            val price = textEdit.text.toString().toDouble();
+            var result = if (price < 125001) {
+                0;
+            } else {
+                ((price - 125000) * 0.02).toInt();
+            }
             findViewById<TextView>(R.id.result).setText(result.toString());
         } finally {
 
